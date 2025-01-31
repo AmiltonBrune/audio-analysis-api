@@ -1,0 +1,47 @@
+swagger: "2.0"
+info:
+  title: API de Análise de Áudio
+  description: API para classificar áudios como leitura ou fala espontânea.
+  version: "1.0.0"
+host: "localhost:5000"
+schemes:
+  - "http"
+paths:
+  /analyze-audio:
+    post:
+      tags:
+        - Audio Analysis
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: audio
+          in: formData
+          type: file
+          required: true
+          description: Arquivo de áudio a ser analisado
+      responses:
+        200:
+          description: Classificação do áudio
+          schema:
+            type: object
+            properties:
+              file_name:
+                type: string
+                description: Nome do arquivo enviado
+              probability_of_reading:
+                type: number
+                format: float
+                description: Probabilidade do áudio ser uma leitura
+              classification:
+                type: string
+                description: "Leitura ou Fala Espontânea"
+              gpt_validation:
+                type: string
+                description: Resposta da OpenAI
+              explanation:
+                type: string
+                description: Breve explicação sobre o cálculo
+        400:
+          description: Nenhum arquivo enviado
+        500:
+          description: Erro ao processar o áudio
