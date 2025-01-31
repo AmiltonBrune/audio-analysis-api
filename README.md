@@ -91,10 +91,14 @@ pytest tests/
 ## 📊 **Processo de Análise de Áudio**
 
 1️⃣ **Conversão do áudio para WAV** (caso necessário).
+
 2️⃣ **Extração de Features Acústicas:**
    - Frequência média, taxa de cruzamento por zero, taxa de silêncio, pitch variability.
+   - 
 3️⃣ **Normalização das Features com StandardScaler.**
+
 4️⃣ **Previsão Inicial do XGBoost.**
+
 5️⃣ **Validação com OpenAI GPT** para refinamento do resultado.
 
 ---
