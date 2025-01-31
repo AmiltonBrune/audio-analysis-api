@@ -51,10 +51,10 @@ OPENAI_API_KEY=your_openai_api_key
 
 ### **3️⃣ Baixar os Datasets**
 
-Execute o script para baixar os datasets do Google Drive:
+Acesse o link para baixar os datasets do Google Drive:
 
 ```bash
-python scripts/download_datasets.py
+https://drive.google.com/drive/folders/1qnwriH2xSBYTr8id8IBuEMbJEvvEepSV
 ```
 
 ### **4️⃣ Processar e Treinar os Modelos**
