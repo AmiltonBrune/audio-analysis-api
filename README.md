@@ -94,7 +94,7 @@ pytest tests/
 
 2️⃣ **Extração de Features Acústicas:**
    - Frequência média, taxa de cruzamento por zero, taxa de silêncio, pitch variability.
-   - 
+
 3️⃣ **Normalização das Features com StandardScaler.**
 
 4️⃣ **Previsão Inicial do XGBoost.**
